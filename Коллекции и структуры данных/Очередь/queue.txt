@@ -1,0 +1,15 @@
+A queue is a useful data structure in programming. It is similar to the ticket queue outside a cinema hall,
+ where the first person entering the queue is the first person who gets the ticket.
+
+Queue follows the First In First Out (FIFO) rule - the item that goes in first is the item that comes out first.
+
+-------------------
+
+A circular queue is the extended version
+ of a regular queue where the last element is connected to the first element. Thus forming a circle-like structure.
+
+------------------
+
+A priority queue is a special type of queue in which each element is associated with a priority value.
+ And, elements are served on the basis of their priority.
+ That is, higher priority elements are served first.

@@ -1,0 +1,7 @@
+A linked list is a linear data structure that includes a series of connected nodes.
+Here, each node stores the data and the address of the next node. For example,
+
+Linked lists can be of multiple types: singly, doubly, and circular linked list. 
+
+A circular linked list is a variation of a linked list in which the last element is linked to the first element.
+ This forms a circular loop.
