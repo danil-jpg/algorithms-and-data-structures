@@ -14,14 +14,14 @@ class Stack implements IStack {
   }
 
   public push(item: any): void {
-    if (this.size() === this.capacity) {
+    if (this.size() >= this.capacity) {
       console.error("This stack is already full");
     } else {
       this.strorage.push(item);
       console.log(this.strorage);
     }
   }
-  public pop(): void {
+  public shift(): void {
     if (this.size() > 0) {
       this.strorage.pop();
       console.log(this.strorage);

@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "crc-32": "^1.2.2"
   }
 }

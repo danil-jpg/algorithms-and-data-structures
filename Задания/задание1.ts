@@ -17,7 +17,7 @@ function someFunction(): void {
   console.log(`Void`);
 }
 
-const obj: { property: string } = { property: "foo" };
+const obj: { property: string } = { property: "prop" };
 
 const otherArr: (number | string | boolean)[] = [1, true, "string"];
 
