@@ -8,14 +8,14 @@
 import cr32 from "crc-32";
 
 //
-const hashTable = new Map();
+const hashMap = new Map();
 
-hashTable.set("key", "value");
-hashTable.set("key", "value1");
+hashMap.set("key", "value");
+hashMap.set("key", "value1");
 
-hashTable.get("key");
+hashMap.get("key");
 
-console.log(hashTable.get("key"));
+console.log(hashMap.get("key"));
 //
 const obj = {};
 obj["key"] = "value";
