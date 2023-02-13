@@ -19,6 +19,7 @@ console.log(hashMap.get("key"));
 //
 const obj = {};
 obj["key"] = "value";
+// obj.hasOwnProperty()
 
 // То,как это выглядит на более низком уровне
 const arr: any[] = [];

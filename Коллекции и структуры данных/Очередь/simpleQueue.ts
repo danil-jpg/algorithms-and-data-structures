@@ -1,5 +1,5 @@
 function simpleQueue() {
-  interface IStack {
+  interface IQueue {
     push(item: any): void;
     shift(): void;
     peekLast(): void;
@@ -7,7 +7,7 @@ function simpleQueue() {
     peekFirst(): void;
   }
 
-  class Stack implements IStack {
+  class Queue implements IQueue {
     public strorage: any[] = [];
     public capacity: number;
 
@@ -17,7 +17,7 @@ function simpleQueue() {
 
     public push(item: any): void {
       if (this.size() >= this.capacity) {
-        console.error("This stack is already full");
+        console.error("This queue is already full");
       } else {
         this.strorage.push(item);
         console.log(this.strorage);
@@ -45,17 +45,19 @@ function simpleQueue() {
     }
   }
 
-  const stack = new Stack(3);
+  const queue = new Queue(3);
 
-  stack.push({ res: 1, id: 2 });
+  queue.push({ res: 1, id: 2 });
 
-  stack.push("str");
+  queue.push("str");
 
-  stack.push(2);
+  queue.push(2);
 
-  stack.shift();
+  queue.peekLast();
 
-  stack.peekFirst();
+  // queue.shift();
+
+  // queue.peekFirst();
 }
 
 simpleQueue();
