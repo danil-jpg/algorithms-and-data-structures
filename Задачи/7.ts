@@ -71,3 +71,81 @@ Sort.bubleSort([1, 2, 55, 21]);
 
 // var result = quickSort(items, 0, items.length - 1);
 // console.log(result);
+
+// https://habr.com/ru/post/492346/
+
+// function simpleLinkedList() {
+//   class Node {
+//     public value: any;
+//     public next: Node | null;
+
+//     constructor(value) {
+//       this.value = value;
+//       this.next = null;
+//     }
+//   }
+
+//   class LinkedList {
+//     public head: Node;
+//     public length: number = 0;
+//     protected arr: Node[] = [];
+//     public nodeNum: number = -1;
+
+//     constructor() {
+//       this.arr = [];
+//     }
+
+//     addToLastPos(value: any): Node[] {
+//       const node = new Node(value);
+
+//       if (this.length === 0) {
+//         this.head = node;
+//         this.arr.push(this.head);
+//       } else {
+//         let curr = this.head;
+
+//         while (curr.next) {
+//           curr = curr.next;
+//         }
+//         curr.next = new Node(value);
+
+//         this.arr.push(curr);
+//       }
+//       this.length++;
+
+//       return this.arr;
+//     }
+
+//     getNodeByPos(pos: number): Node | string {
+//       if (pos < 0 || pos > this.length) {
+//         console.error("Search failed");
+//         return "eror";
+//       } else {
+//         console.log(this.arr[pos]);
+//         return this.arr[pos];
+//       }
+//     }
+
+//     listAllValues(): void {
+//       console.table(this.arr);
+//     }
+
+//     removeLastNode(): any {}
+//   }
+//   const list = new LinkedList();
+
+//   list.addToLastPos("1");
+//   list.addToLastPos("2");
+
+//   // list.addToLastPos("5");
+
+//   list.addToLastPos("3");
+//   list.addToLastPos("5");
+//   list.addToLastPos("6");
+//   list.removeLastNode();
+//   list.listAllValues();
+//   // console.log(list.listAllValues());
+//   //   list.getNodeByPos(1);
+// }
+
+// simpleLinkedList();

@@ -1,5 +1,3 @@
-// https://habr.com/ru/post/492346/
-
 function simpleLinkedList() {
   class Node {
     public value: any;
@@ -15,6 +13,7 @@ function simpleLinkedList() {
     public head: Node;
     public length: number = 0;
     protected arr: Node[] = [];
+    public nodeNum: number = -1;
 
     constructor() {
       this.arr = [];
@@ -33,6 +32,7 @@ function simpleLinkedList() {
           curr = curr.next;
         }
         curr.next = new Node(value);
+
         this.arr.push(curr.next);
       }
       this.length++;
@@ -49,13 +49,38 @@ function simpleLinkedList() {
         return this.arr[pos];
       }
     }
+
+    listAllValues(): void {
+      console.table(this.arr);
+    }
+
+    removeLastNode(): any {
+      let curr: null | Node = this.head;
+
+      for (let i = 0; i < this.arr.length - 2; i++) {
+        curr = curr.next!;
+      }
+      curr.next = null;
+      console.log(curr);
+    }
   }
   const list = new LinkedList();
 
   list.addToLastPos("1");
   list.addToLastPos("2");
+
+  // list.addToLastPos("5");
+
   list.addToLastPos("3");
-  console.log(list.addToLastPos("4"));
+  list.addToLastPos("4");
+  list.addToLastPos("5");
+  list.removeLastNode();
+  list.addToLastPos("6");
+  list.addToLastPos("7");
+  list.addToLastPos("8");
+  list.getNodeByPos(4);
+  list.listAllValues();
+  // console.log(list.listAllValues());
   //   list.getNodeByPos(1);
 }
 
