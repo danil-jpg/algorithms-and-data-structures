@@ -8,29 +8,61 @@
 import cr32 from "crc-32";
 
 //
-const hashMap = new Map();
+// const hashMap = new Map();
 
-hashMap.set("key", "value");
-hashMap.set("key", "value1");
+// hashMap.set("key", "value");
+// hashMap.set("key", "value1");
 
-hashMap.get("key");
+// hashMap.get("key");
 
-console.log(hashMap.get("key"));
-//
-const obj = {};
-obj["key"] = "value";
+// console.log(hashMap.get("key"));
+// //
+// const obj = {};
+// obj["key"] = "value";
 // obj.hasOwnProperty()
 
 // То,как это выглядит на более низком уровне
-const arr: any[] = [];
+// const arr: any[] = [];
 
-const data: string = "Hello world";
+// const data: string = "Hello world";
 
-const key: string = "Key1";
+// const key: string = "Key1";
 
-const hashFunc = cr32.str(key);
+// const hashFunc = cr32.str(key);
 
-arr[hashFunc] = [key, data];
+// arr[hashFunc] = [key, data];
 
-console.log(arr[hashFunc]);
+// console.log(arr[hashFunc]);
 //
+
+class ExtendedMap extends Map {
+  public arr: any[] = [];
+
+  set(key: any, value: any): this {
+    const hash = this.generateHash(key);
+    this.arr[hash] = [key, value];
+    console.log(this.arr, hash);
+    return this;
+  }
+
+  get(key: string): any {
+    console.log(this.arr[this.generateHash(key)]);
+    return this.arr[this.generateHash(key)];
+  }
+
+  generateHash(key: string): number {
+    let hash: number | string = 0;
+
+    for (let i = 0; i < key.length; i++) {
+      hash += key.charCodeAt(i);
+    }
+
+    return Math.fround(hash);
+  }
+}
+
+const extendedMap = new ExtendedMap();
+
+extendedMap.set("key", "value");
+
+extendedMap.get("key");
