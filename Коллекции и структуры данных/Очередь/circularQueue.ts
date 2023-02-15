@@ -1,59 +1,55 @@
 class CircularQueue {
-  public element;
-  public size;
-  public length;
-  public front;
-  public back;
+  public back: number = 0;
+  public front: number = 0;
+  public length: number = 0;
+  public capacity: number;
+  public arr: any[] = [];
 
-  constructor(size) {
-    this.element = [];
-    this.size = size;
-    this.length = 0;
-    this.front = 0;
-    this.back = -1;
+  constructor(capacity) {
+    this.capacity = capacity;
   }
-  isEmpty(): boolean {
-    return this.length == 0;
+
+  enqueue(elem: any): void {
+    if (this.length >= this.capacity) {
+      throw new Error("Out of capacity");
+    } else {
+      this.arr[this.back % this.capacity] = elem;
+
+      this.back++;
+      this.length++;
+      console.log(this.arr);
+    }
   }
-  enqueue(addedElem) {
-    if (this.length >= this.size) throw new Error("Maximum length exceeded");
-    this.back++;
-    this.element[this.back % this.size] = addedElem;
-    console.log(this.back, this.size, this.back % this.size);
-    this.length++;
+
+  dequeue(): void {
+    if (this.length > 0) {
+      this.arr[this.front % this.capacity] = null;
+
+      this.front++;
+      this.length--;
+
+      console.log(this.arr);
+    }
   }
-  dequeue() {
-    if (this.isEmpty()) throw new Error("No elements in the queue");
-    const value = this.getFront();
-    this.element[this.front % this.size] = null;
-    this.front++;
-    this.length--;
-    return value;
-  }
-  getFront() {
-    if (this.isEmpty()) throw new Error("No elements in the queue");
-    console.log(this.front, this.size, this.front % this.size);
-    return this.element[this.front % this.size];
-  }
-  clear() {
-    this.element = new Array();
-    this.length = 0;
-    this.back = 0;
-    this.front = -1;
-  }
-  info() {
-    // console.table(this.element, this.length);
-    // console.table(this.back, this.front);
-    console.table(this);
+
+  findElemByPos(pos: number) {
+    const res = this.arr[pos];
+
+    console.log(res);
+
+    return res;
   }
 }
 
-const cl = new CircularQueue(3);
+const concreteQueue = new CircularQueue(6);
 
-cl.enqueue(1);
-cl.enqueue(2);
-cl.enqueue(3);
+concreteQueue.enqueue("first");
+concreteQueue.enqueue("Second");
+concreteQueue.enqueue("Third");
+concreteQueue.enqueue("Fourth");
+concreteQueue.enqueue("Fifth");
+concreteQueue.enqueue("Sixth");
 
-cl.getFront();
+concreteQueue.dequeue();
 
-// cl.info();
+concreteQueue.findElemByPos(2);
