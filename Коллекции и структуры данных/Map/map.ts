@@ -41,7 +41,7 @@ class ExtendedMap extends Map {
   set(key: any, value: any): this {
     const hash = this.generateHash(key);
     this.arr[hash] = [key, value];
-    console.log(this.arr, hash);
+    // console.log(this.arr, hash);
     return this;
   }
 
@@ -51,18 +51,30 @@ class ExtendedMap extends Map {
   }
 
   generateHash(key: string): number {
-    let hash: number | string = 0;
+    let hash: number = 0;
 
     for (let i = 0; i < key.length; i++) {
       hash += key.charCodeAt(i);
     }
 
-    return Math.fround(hash);
+    return hash;
   }
 }
 
 const extendedMap = new ExtendedMap();
 
-extendedMap.set("key", "value");
+extendedMap.set("key", "value1");
+
+extendedMap.set("notAkey", "value2");
+
+// extendedMap.set("notkey", "value3");
+
+// extendedMap.set("notkey1", "value4");
 
 extendedMap.get("key");
+
+extendedMap.get("notAkey");
+
+// extendedMap.get("notkey");
+
+// extendedMap.get("notkey1");

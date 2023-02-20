@@ -13,11 +13,8 @@ function simpleLinkedList() {
     public head: Node;
     public length: number = 0;
     protected arr: Node[] = [];
-    public nodeNum: number = -1;
 
-    constructor() {
-      this.arr = [];
-    }
+    constructor() {}
 
     addToLastPos(value: any): Node[] {
       const node = new Node(value);
