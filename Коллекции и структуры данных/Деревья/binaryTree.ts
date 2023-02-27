@@ -38,8 +38,28 @@ function binaryTree() {
       }
     }
 
+    search(parentNode: Node | null, searchInt: number): Node | null {
+      if (this.root === null) {
+        console.error("There is no root element!");
+        return null;
+      } else if (parentNode === null) {
+        console.error("There is no such an integer!");
+        return null;
+      } else if (searchInt < parentNode.data) {
+        this.search(parentNode.left, searchInt);
+      } else if (searchInt > parentNode.data) {
+        this.search(parentNode.right, searchInt);
+      } else {
+        console.log(`Search succesfull!`);
+        console.log(parentNode);
+        return parentNode;
+      }
+
+      return null;
+    }
+
     print(): void {
-      console.dir(this);
+      console.log(this);
     }
   }
 
@@ -60,6 +80,8 @@ function binaryTree() {
   binarySearch.insertNode(1);
 
   binarySearch.insertNode(0.7);
+
+  binarySearch.search(binarySearch.root, 2);
 
   binarySearch.print();
 }
