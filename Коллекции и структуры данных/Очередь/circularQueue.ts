@@ -18,6 +18,7 @@ class CircularQueue {
       this.arr[this.back % this.capacity] = elem;
       this.back++;
       this.length++;
+      console.log(this.arr);
     } else {
       this.arr[this.back % this.capacity] = elem;
       this.back++;
@@ -61,16 +62,20 @@ concreteQueue.enqueue("FFF");
 // concreteQueue.enqueue("GGG");
 concreteQueue.dequeue();
 concreteQueue.dequeue();
+concreteQueue.enqueue("GGG");
+concreteQueue.enqueue("III");
 concreteQueue.dequeue();
 concreteQueue.dequeue();
-concreteQueue.dequeue();
-concreteQueue.dequeue();
+// concreteQueue.dequeue();
+// concreteQueue.dequeue();
+// concreteQueue.dequeue();
+// concreteQueue.dequeue();
 
-concreteQueue.enqueue("AAA1");
-concreteQueue.enqueue("AAA2");
-concreteQueue.enqueue("AAA3");
-concreteQueue.enqueue("AAA4");
-concreteQueue.enqueue("AAA5");
-concreteQueue.enqueue("AAA6");
+// concreteQueue.enqueue("AAA1");
+// concreteQueue.enqueue("AAA2");
+// concreteQueue.enqueue("AAA3");
+// concreteQueue.enqueue("AAA4");
+// concreteQueue.enqueue("AAA5");
+// concreteQueue.enqueue("AAA6");
 
 concreteQueue.dequeue();

@@ -44,17 +44,34 @@ class Sort {
     return res;
   }
 
-  static genRandNumArr(numOfElem: number): number[] {
+  static insertionSort(arr: number[]): number[] {
+    for (let i = 1; i < arr.length; i++) {
+      let curr = arr[i];
+
+      let j: number;
+
+      for (j = i - 1; j >= 0 && arr[j] > curr; j--) {
+        arr[j + 1] = arr[j];
+      }
+
+      arr[j + 1] = curr;
+    }
+
+    return arr;
+  }
+
+  static genRandNumArr(): number[] {
     const arr: number[] = [];
-    for (let i = 0; i < numOfElem; i++) {
-      const rand = Math.round(Math.random() * numOfElem);
+    for (let i = 0; i < 10000; i++) {
+      const rand = Math.round(Math.random() * 10000);
       arr.push(rand);
     }
-    //   console.log(arr);
     return arr;
   }
 }
 
 // Sort.bubleSort([1, 2, 55, 21]);
 
-console.log(Sort.quickSort(Sort.genRandNumArr(15)));
+// console.log(Sort.quickSort(Sort.genRandNumArr(100)));
+
+console.log(Sort.insertionSort([1, 2, 55, 21, 3, 4]));

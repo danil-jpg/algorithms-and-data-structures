@@ -1,8 +1,8 @@
 function binaryTree() {
   class Node {
-    public data: any;
-    public left: any = null;
-    public right: any = null;
+    public data: number;
+    public left: Node | null = null;
+    public right: Node | null = null;
 
     constructor(data: any) {
       this.data = data;
@@ -39,11 +39,8 @@ function binaryTree() {
     }
 
     search(parentNode: Node | null, searchInt: number): Node | null {
-      if (this.root === null) {
-        console.error("There is no root element!");
-        return null;
-      } else if (parentNode === null) {
-        console.error("There is no such an integer!");
+      if (this.root === null || parentNode === null) {
+        console.error("Eror");
         return null;
       } else if (searchInt < parentNode.data) {
         this.search(parentNode.left, searchInt);
@@ -83,7 +80,7 @@ function binaryTree() {
 
   binarySearch.search(binarySearch.root, 2);
 
-  binarySearch.print();
+  // binarySearch.print();
 }
 
 binaryTree();
