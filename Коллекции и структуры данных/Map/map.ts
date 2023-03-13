@@ -39,26 +39,24 @@ class ExtendedMap extends Map {
   public arr: any[] = [];
 
   set(key: any, value: any): this {
-    const hash = this.generateHash(key);
-    this.arr[hash] = [key, value];
-    // console.log(this.arr, hash);
+    this.arr[key] = [key, value];
     return this;
   }
 
   get(key: string): any {
-    console.log(this.arr[this.generateHash(key)]);
-    return this.arr[this.generateHash(key)];
+    console.log(this.arr[key]);
+    return this.arr[key];
   }
 
-  generateHash(key: string): number {
-    let hash: number = 0;
+  // generateHash(key: string): number {
+  //   let hash: number = 0;
 
-    for (let i = 0; i < key.length; i++) {
-      hash += key.charCodeAt(i);
-    }
+  //   for (let i = 0; i < key.length; i++) {
+  //     hash += key.charCodeAt(i);
+  //   }
 
-    return hash;
-  }
+  //   return hash;
+  // }
 }
 
 const extendedMap = new ExtendedMap();
