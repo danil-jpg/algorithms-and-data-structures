@@ -12,37 +12,54 @@ class User {
   }
 }
 
-const user1 = new User("Patrik", "Surname1", "1", "22");
-const user2 = new User("Den", "Surname2", "2", "21");
-const user3 = new User("Mark", "Surname3", "3", "23");
-const user4 = new User("Irina", "Surname4", "4", "33");
-const user5 = new User("Claus", "Surname5", "5", "44");
-const user6 = new User("Danil", "Surname6", "6", "11");
-const user7 = new User("Dmitry", "Surname7", "7", "23");
-const user8 = new User("Sasha", "Surname8", "8", "67");
-const user9 = new User("Olena", "Surname9", "9", "35");
-const user10 = new User("Pavel", "Surname10", "10", "66");
+const user1 = new User("Patrik", "Surname1", 1, "22");
+const user2 = new User("Den", "Surname2", 2, "21");
+const user3 = new User("Mark", "Surname3", 3, "23");
+const user4 = new User("Irina", "Surname4", 4, "33");
+const user5 = new User("Claus", "Surname5", 5, "44");
+const user6 = new User("Danil", "Surname6", 6, "11");
+const user7 = new User("Dmitry", "Surname7", 7, "23");
+const user8 = new User("Sasha", "Surname8", 8, "67");
+const user9 = new User("Olena", "Surname9", 9, "35");
+const user10 = new User("Pavel", "Surname10", 10, "66");
 
-const userArr = [];
+const userArr: User[] = [];
 
+userArr.push(user2);
+userArr.push(user10);
+userArr.push(user1);
+userArr.push(user5);
+userArr.push(user8);
+userArr.push(user9);
+userArr.push(user3);
+userArr.push(user7);
+userArr.push(user6);
+userArr.push(user4);
+
+// console.log(userArr);
 class SortUser {
-  public arr: (string | number)[] = [];
+  public arr: User[] = [];
 
-  constructor(arr: (string | number)[]) {
+  constructor(arr: User[]) {
     this.arr = arr;
   }
 
-  sortById(): (string | number)[] {
+  sortById(): void {
     for (let i = 1; i < this.arr.length; i++) {
-      let curr = this.arr[i];
-
+      let currId = this.arr[i].id;
+      let currNode = this.arr[i];
       let j: number;
 
-      for (j = i - 1; j >= 0 && this.arr[j] > curr; j--) {
+      for (j = i - 1; j >= 0 && this.arr[j].id > currId; j--) {
         this.arr[j + 1] = this.arr[j];
       }
-
-      this.arr[j + 1] = curr;
+      this.arr[j + 1] = currNode;
     }
+
+    console.log(this.arr);
   }
 }
+
+const sortUser = new SortUser(userArr);
+
+sortUser.sortById();
