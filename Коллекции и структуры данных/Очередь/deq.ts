@@ -11,9 +11,9 @@
 // dequeue.shift();
 
 class Deque {
-  public items;
-  public count;
-  public lowestCount;
+  public items: object;
+  public count: number;
+  public lowestCount: number;
 
   constructor() {
     this.items = {};
@@ -21,32 +21,48 @@ class Deque {
     this.lowestCount = 0;
   }
 
-  addRight(element) {
+  addBack(element: any): void {
     this.items[this.count] = element;
     this.count++;
   }
-  addLeft(element) {
+  addFront(element: any): void {
     if (this.isEmpty()) {
-      //1
-      this.addRight(element);
-    }
-    // else if (this.lowestCount  > 0) {    //2
-    // 	this.lowestCount --;
-    // 	this.items[this.lowestCount] = element;
-    // }
-    else {
-      //3
+      this.addBack(element);
+    } else if (this.lowestCount > 0) {
+      this.lowestCount--;
+      this.items[this.lowestCount] = element;
+    } else {
       for (let index = this.count; index > 0; index--) {
         this.items[index] = this.items[index - 1];
       }
       this.count++;
       this.items[0] = element;
     }
-    return true;
+  }
+
+  removeFront(): any {
+    if (this.isEmpty()) {
+      return `Object is empty`;
+    }
+
+    let result = this.items[this.lowestCount];
+    delete this.items[this.lowestCount];
+    this.lowestCount++;
+    return result;
+  }
+
+  removeBack(): any {
+    if (this.isEmpty()) {
+      return `Object is empty`;
+    }
+    let result = this.items[this.count - 1];
+    delete this.items[this.count - 1];
+    this.count--;
+    return result;
   }
 
   isEmpty(): boolean {
-    if (this.items.length > 1) {
+    if (Object.keys(this.items).length === 0) {
       return true;
     } else {
       return false;
@@ -56,8 +72,16 @@ class Deque {
 
 const deq = new Deque();
 
-deq.addRight("elem1");
+deq.addBack("elem1");
 
-deq.addRight("elem2");
+deq.addBack("elem2");
+
+deq.addBack("elem3");
+
+deq.addFront("elem4");
+
+deq.removeFront();
+
+deq.addFront("elem5");
 
 console.log(deq.items);
