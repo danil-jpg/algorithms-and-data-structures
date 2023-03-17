@@ -5,9 +5,6 @@
 // https://www.freecodecamp.org/news/javascript-hash-table-associative-array-hashing-in-js/ - тут зачем нужен map
 // https://ru.hexlet.io/courses/js-objects/lessons/hash-table/theory_unit
 
-import cr32 from "crc-32";
-
-//
 // const hashMap = new Map();
 
 // hashMap.set("key", "value");

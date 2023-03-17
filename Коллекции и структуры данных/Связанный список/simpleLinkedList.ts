@@ -50,35 +50,36 @@ function simpleLinkedList() {
     listAllValues(): void {
       console.table(this.arr);
     }
-
-    removeLastNode(): any {
-      let curr: null | Node = this.head;
-
-      for (let i = 0; i < this.arr.length - 2; i++) {
-        curr = curr.next!;
-      }
-      curr.next = null;
-      console.log(curr);
-    }
   }
   const list = new LinkedList();
 
   list.addToLastPos("1");
   list.addToLastPos("2");
-
-  // list.addToLastPos("5");
-
   list.addToLastPos("3");
   list.addToLastPos("4");
   list.addToLastPos("5");
-  list.removeLastNode();
   list.addToLastPos("6");
-  list.addToLastPos("7");
-  list.addToLastPos("8");
-  list.getNodeByPos(4);
   list.listAllValues();
+
+  // list.addToLastPos("7");
+  // list.addToLastPos("8");
+  // list.getNodeByPos(4);
+  // list.listAllValues();
   // console.log(list.listAllValues());
   //   list.getNodeByPos(1);
 }
 
 simpleLinkedList();
+
+// removeLastNode(): any {
+//   let curr: null | Node = this.head;
+
+//   for (let i = 0; i < this.arr.length - 2; i++) {
+//     curr = curr.next!;
+//   }
+//   while (curr.next) {
+//     curr = curr.next;
+//   }
+//   curr.next = null;
+//   console.log(curr);
+// }
