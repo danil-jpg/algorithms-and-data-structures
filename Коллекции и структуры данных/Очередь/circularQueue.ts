@@ -50,14 +50,13 @@ class CircularQueue {
   }
 
   print(): void {
-    const nextToDelete = this.arr[this.front];
+    const nextToDelete = this.arr[this.front % this.capacity];
     const firstPart = this.arr.slice(0, this.arr.indexOf(nextToDelete));
 
     const secondPart = this.arr.slice(this.arr.indexOf(nextToDelete) + 1, this.arr.length);
 
-    console.log(``);
     console.log(`%c${firstPart} %c${nextToDelete} %c${secondPart}`, "background: transparent; color: red", "background: transparent; color: #bada55", "background: transparent; color: black");
-    console.log(``);
+    console.log(this.front);
   }
 }
 
@@ -73,15 +72,16 @@ concreteQueue.enqueue("6");
 concreteQueue.dequeue();
 concreteQueue.dequeue();
 
-concreteQueue.enqueue("7");
-concreteQueue.enqueue("8");
-concreteQueue.dequeue();
-concreteQueue.dequeue();
-
-concreteQueue.print();
+// concreteQueue.enqueue("7");
+// concreteQueue.enqueue("8");
+// concreteQueue.dequeue();
+// concreteQueue.dequeue();
 
 // concreteQueue.dequeue();
 // concreteQueue.dequeue();
+
+// // concreteQueue.print();
+
 // concreteQueue.dequeue();
 // concreteQueue.dequeue();
 // concreteQueue.dequeue();
@@ -96,4 +96,4 @@ concreteQueue.print();
 
 // concreteQueue.dequeue();
 
-// concreteQueue.print();
+concreteQueue.print();

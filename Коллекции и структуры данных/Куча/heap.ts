@@ -5,7 +5,7 @@ class Heap {
     this.heap = [];
   }
 
-  insertMinNum(int: number) {
+  insertMinNum(int: number): void {
     this.heap.push(int);
 
     let curr = this.heap.length - 1;
