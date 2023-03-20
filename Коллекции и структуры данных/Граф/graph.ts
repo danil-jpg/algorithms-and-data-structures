@@ -2,7 +2,7 @@ class Graph {
   public vertices: object;
 
   constructor() {
-    this.vertices = {}; // список смежности графа
+    this.vertices = {};
   }
 
   addVertex(value: number): void {
@@ -44,8 +44,7 @@ graph.addEdge(1, 3);
 graph.print();
 
 const graphMatrix = [
-  [0, 1, 0, 0],
-  [0, 0, 1, 1],
-  [0, 0, 0, 0],
-  [1, 0, 1, 0],
+  [0, 1, 1, 0],
+  [1, 0, 0, 0],
+  [1, 0, 0, 0],
 ];

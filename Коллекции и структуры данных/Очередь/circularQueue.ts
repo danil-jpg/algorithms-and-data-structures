@@ -69,18 +69,20 @@ concreteQueue.enqueue("4");
 concreteQueue.enqueue("5");
 concreteQueue.enqueue("6");
 
+concreteQueue.print();
+
 concreteQueue.dequeue();
 concreteQueue.dequeue();
 
-// concreteQueue.enqueue("7");
-// concreteQueue.enqueue("8");
-// concreteQueue.dequeue();
-// concreteQueue.dequeue();
+concreteQueue.print();
+
+concreteQueue.enqueue("7");
+concreteQueue.enqueue("8");
+concreteQueue.dequeue();
+concreteQueue.dequeue();
 
 // concreteQueue.dequeue();
 // concreteQueue.dequeue();
-
-// // concreteQueue.print();
 
 // concreteQueue.dequeue();
 // concreteQueue.dequeue();

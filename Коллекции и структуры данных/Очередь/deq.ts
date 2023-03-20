@@ -74,13 +74,23 @@ const deq = new Deque();
 
 deq.addBack("elem1");
 
+console.log(deq.items);
+
 deq.addBack("elem2");
+
+console.log(deq.items);
 
 deq.addBack("elem3");
 
+console.log(deq.items);
+
 deq.addFront("elem4");
 
+console.log(deq.items);
+
 deq.removeFront();
+
+console.log(deq.items);
 
 deq.addFront("elem5");
 

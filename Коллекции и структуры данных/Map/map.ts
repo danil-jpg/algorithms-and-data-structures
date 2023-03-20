@@ -44,16 +44,6 @@ class ExtendedMap extends Map {
     console.log(this.arr[key]);
     return this.arr[key];
   }
-
-  // generateHash(key: string): number {
-  //   let hash: number = 0;
-
-  //   for (let i = 0; i < key.length; i++) {
-  //     hash += key.charCodeAt(i);
-  //   }
-
-  //   return hash;
-  // }
 }
 
 const extendedMap = new ExtendedMap();
