@@ -74,4 +74,4 @@ class Sort {
 
 // console.log(Sort.quickSort(Sort.genRandNumArr(100)));
 
-console.log(Sort.insertionSort([1, 2, 55, 21, 3, 4, 8]));
+console.log(Sort.insertionSort([5, 2, 4, 6, 1, 3]));
