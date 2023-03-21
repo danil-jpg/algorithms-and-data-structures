@@ -60,6 +60,23 @@ class Sort {
     return arr;
   }
 
+  static selectionSort(array: number[]): number[] {
+    const arr = [...array];
+
+    for (let i = 0; i < arr.length - 1; i++) {
+      let minIndex = i;
+
+      for (let j = i + 1; j < arr.length; j++) {
+        if (arr[j] < arr[minIndex]) {
+          minIndex = j;
+        }
+      }
+
+      [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+    }
+    return arr;
+  }
+
   static genRandNumArr(): number[] {
     const arr: number[] = [];
     for (let i = 0; i < 10000; i++) {
@@ -70,8 +87,8 @@ class Sort {
   }
 }
 
-// Sort.bubleSort([1, 2, 55, 21]);
+console.log(Sort.selectionSort([1, 2, 55, 21]));
 
 // console.log(Sort.quickSort(Sort.genRandNumArr(100)));
 
-console.log(Sort.insertionSort([5, 2, 4, 6, 1, 3]));
+// console.log(Sort.insertionSort([5, 2, 4, 6, 1, 3]));
