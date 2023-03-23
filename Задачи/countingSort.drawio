@@ -1,0 +1,108 @@
+<mxfile host="65bd71144e">
+    <diagram id="y7dqcl6TtZw70LCDeQZ-" name="Page-1">
+        <mxGraphModel dx="1325" dy="1699" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="10" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="start" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.start" vertex="1" parent="1">
+                    <mxGeometry x="335" y="50" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="end" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.start" vertex="1" parent="1">
+                    <mxGeometry x="335" y="720" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;div style=&quot;color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); font-family: MontserratAlternates-Regular, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;div&gt;maxNum &lt;span style=&quot;color: #56b6c2;&quot;&gt;=&lt;/span&gt; Math.&lt;span style=&quot;color: #61afef;&quot;&gt;max&lt;/span&gt;(&lt;span style=&quot;color: #56b6c2;&quot;&gt;...&lt;/span&gt;inputArr);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; serviceVar;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &lt;span style=&quot;color: #d19a66;&quot;&gt;count&lt;/span&gt; &lt;span style=&quot;color: #56b6c2;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #c678dd;&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color: #61afef;&quot;&gt;Array&lt;/span&gt;(maxNum &lt;span style=&quot;color: #56b6c2;&quot;&gt;+&lt;/span&gt; &lt;span style=&quot;color: #d19a66;&quot;&gt;1&lt;/span&gt;).&lt;span style=&quot;color: #61afef;&quot;&gt;fill&lt;/span&gt;(&lt;span style=&quot;color: #d19a66;&quot;&gt;0&lt;/span&gt;);&lt;/div&gt;&lt;/div&gt;" style="html=1;dashed=0;whitespace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="-20" width="420" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;div style=&quot;color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); font-family: MontserratAlternates-Regular, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;span style=&quot;color: #5c6370;font-style: italic;&quot;&gt;// Шаг 3 : посчитать кумулятивную суму каждого числа (1,3,5 =&amp;gt; 1,4,9)&lt;/span&gt;&lt;/div&gt;" style="html=1;dashed=0;whitespace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="400" width="690" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;div style=&quot;color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); font-family: MontserratAlternates-Regular, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;div&gt;serviceVar &lt;span style=&quot;color: #56b6c2;&quot;&gt;=&lt;/span&gt; inputArr[i];&lt;/div&gt;&lt;div&gt;count[serviceVar]&lt;span style=&quot;color: rgb(86, 182, 194);&quot;&gt;++&lt;/span&gt;;&lt;/div&gt;&lt;/div&gt;" style="html=1;dashed=0;whitespace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="220" width="250" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="True" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="14">
+                    <mxGeometry x="-0.3333" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;html=1;entryX=1;entryY=0.567;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="7" target="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="620" y="350" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="620" y="160"/>
+                            <mxPoint x="620" y="337"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="False" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="16">
+                    <mxGeometry x="-0.1681" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="&lt;div style=&quot;color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); font-family: MontserratAlternates-Regular, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;span style=&quot;color: #c678dd;&quot;&gt;let&lt;/span&gt; i &lt;span style=&quot;color: #56b6c2;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #d19a66;&quot;&gt;0&lt;/span&gt;; i &lt;span style=&quot;color: #56b6c2;&quot;&gt;&amp;lt;&lt;/span&gt; inputArr.&lt;span style=&quot;color: #e06c75;&quot;&gt;length&lt;/span&gt;; i&lt;span style=&quot;color: #56b6c2;&quot;&gt;++&lt;/span&gt;&lt;/div&gt;" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.loop" vertex="1" parent="1">
+                    <mxGeometry x="190" y="140" width="370" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="True" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=none;html=1;entryX=-0.005;entryY=0.433;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8" target="9">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="80" y="610" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="80" y="335"/>
+                            <mxPoint x="80" y="540"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="False" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="19">
+                    <mxGeometry x="0.0609" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="&lt;div style=&quot;color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); font-family: MontserratAlternates-Regular, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;span style=&quot;color: #c678dd;&quot;&gt;let&lt;/span&gt; i &lt;span style=&quot;color: #56b6c2;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #d19a66;&quot;&gt;1&lt;/span&gt;; i &lt;span style=&quot;color: #56b6c2;&quot;&gt;&amp;lt;=&lt;/span&gt; maxNum; i&lt;span style=&quot;color: #56b6c2;&quot;&gt;++&lt;/span&gt;&lt;/div&gt;" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.loop" vertex="1" parent="1">
+                    <mxGeometry x="230" y="320" width="290" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=none;html=1;" edge="1" parent="1" source="9" target="21">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="True" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="23">
+                    <mxGeometry x="0.4833" y="1" relative="1" as="geometry">
+                        <mxPoint x="2" y="-24" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9" target="3">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="690" y="790" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="690" y="550"/>
+                            <mxPoint x="690" y="740"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="&lt;div style=&quot;color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); font-family: MontserratAlternates-Regular, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;span style=&quot;color: #c678dd;&quot;&gt;let&lt;/span&gt; i &lt;span style=&quot;color: #56b6c2;&quot;&gt;=&lt;/span&gt; inputArr.&lt;span style=&quot;color: #e06c75;&quot;&gt;length&lt;/span&gt; &lt;span style=&quot;color: #56b6c2;&quot;&gt;-&lt;/span&gt; &lt;span style=&quot;color: #d19a66;&quot;&gt;1&lt;/span&gt;; i &lt;span style=&quot;color: #56b6c2;&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&quot;color: #d19a66;&quot;&gt;0&lt;/span&gt;; i&lt;span style=&quot;color: #56b6c2;&quot;&gt;--&lt;/span&gt;&lt;/div&gt;" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.loop" vertex="1" parent="1">
+                    <mxGeometry x="170" y="530" width="410" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;div style=&quot;color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); font-family: MontserratAlternates-Regular, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;count[i] &lt;span style=&quot;color: #56b6c2;&quot;&gt;=&lt;/span&gt; count[i] &lt;span style=&quot;color: #56b6c2;&quot;&gt;+&lt;/span&gt; count[i &lt;span style=&quot;color: #56b6c2;&quot;&gt;-&lt;/span&gt; &lt;span style=&quot;color: #d19a66;&quot;&gt;1&lt;/span&gt;];&lt;/div&gt;" style="html=1;dashed=0;whitespace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="410" width="350" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;div style=&quot;color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); font-family: MontserratAlternates-Regular, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #5c6370;font-style: italic;&quot;&gt;// Шаг 4 : обращаясь с конца входящего массива к его числам,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &lt;span style=&quot;color: #5c6370;font-style: italic;&quot;&gt;// находить их в массиве подсчета по индексу и записывать их в новый массив,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &lt;span style=&quot;color: #5c6370;font-style: italic;&quot;&gt;// сдвигая на 1 еденицу назад,затем уменьшая кумулятивную сумму в массиве count на 1.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="html=1;dashed=0;whitespace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="600" width="880" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;div style=&quot;color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); font-family: MontserratAlternates-Regular, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;span style=&quot;color: #5c6370;font-style: italic;&quot;&gt;Шаг 2 : посчитать количество повторений числа&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); font-family: MontserratAlternates-Regular, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;span style=&quot;color: #5c6370;font-style: italic;&quot;&gt;&amp;nbsp;и записать в массив подсчета.&lt;/span&gt;&lt;/div&gt;" style="html=1;dashed=0;whitespace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="230" width="450" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;div style=&quot;color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); font-family: MontserratAlternates-Regular, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; outputArr[count[inputArr[i]] &lt;span style=&quot;color: #56b6c2;&quot;&gt;-&lt;/span&gt; &lt;span style=&quot;color: #d19a66;&quot;&gt;1&lt;/span&gt;] &lt;span style=&quot;color: #56b6c2;&quot;&gt;=&lt;/span&gt; inputArr[i];&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; count[inputArr[i]] &lt;span style=&quot;color: #56b6c2;&quot;&gt;=&lt;/span&gt; count[inputArr[i]] &lt;span style=&quot;color: #56b6c2;&quot;&gt;-&lt;/span&gt; &lt;span style=&quot;color: #d19a66;&quot;&gt;1&lt;/span&gt;;&lt;/div&gt;&lt;/div&gt;" style="html=1;dashed=0;whitespace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="105" y="620" width="540" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="html=1;dashed=0;whitespace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="1430" y="460" width="100" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

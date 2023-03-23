@@ -77,6 +77,36 @@ class Sort {
     return arr;
   }
 
+  static countSort(inputArr: number[]): number[] {
+    // Шаг 1 : найти самое большое число
+    let maxNum = Math.max(...inputArr);
+    let serviceVar;
+    const count = new Array(maxNum + 1).fill(0);
+
+    // Шаг 2 : посчитать количество повторений числа и записать в массив подсчета.
+    for (let i = 0; i < inputArr.length; i++) {
+      serviceVar = inputArr[i];
+      count[serviceVar]++;
+    }
+    // Шаг 3 : посчитать кумулятивную суму каждого числа (1,3,5 => 1,4,9)
+    for (let i = 1; i <= maxNum; i++) {
+      count[i] = count[i] + count[i - 1];
+    }
+
+    const outputArr: number[] = [];
+
+    // Шаг 4 : обращаясь с конца входящего массива к его числам,
+    // находить их в массиве подсчета по индексу и записывать их в новый массив,
+    // сдвигая на 1 еденицу назад,затем уменьшая кумулятивную сумму в массиве count на 1.
+
+    for (let i = inputArr.length - 1; i >= 0; i--) {
+      outputArr[count[inputArr[i]] - 1] = inputArr[i];
+      count[inputArr[i]] = count[inputArr[i]] - 1;
+    }
+
+    return outputArr;
+  }
+
   static genRandNumArr(): number[] {
     const arr: number[] = [];
     for (let i = 0; i < 10000; i++) {
@@ -87,8 +117,8 @@ class Sort {
   }
 }
 
-console.log(Sort.selectionSort([1, 2, 55, 21]));
+// console.log(Sort.countSort([1, 2, 55, 21]));
 
-// console.log(Sort.quickSort(Sort.genRandNumArr(100)));
+console.log(Sort.countSort(Sort.genRandNumArr()));
 
 // console.log(Sort.insertionSort([5, 2, 4, 6, 1, 3]));
