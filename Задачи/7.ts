@@ -117,8 +117,8 @@ class Sort {
   }
 }
 
-// console.log(Sort.countSort([1, 2, 55, 21]));
+// console.log(Sort.selectionSort(Sort.genRandNumArr()));
+
+// console.log(Sort.insertionSort(Sort.genRandNumArr()));
 
 console.log(Sort.countSort(Sort.genRandNumArr()));
-
-// console.log(Sort.insertionSort([5, 2, 4, 6, 1, 3]));
