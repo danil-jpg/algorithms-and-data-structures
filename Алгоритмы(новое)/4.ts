@@ -12,8 +12,6 @@ function brackets(str: string): boolean {
     }
   }
 
-  console.log(stack);
-
   if (stack.length > 0) {
     return false;
   }
@@ -22,5 +20,3 @@ function brackets(str: string): boolean {
 }
 
 console.log(brackets("x * ((y - 10))()"));
-// let res = [];
-// console.log(res.pop());
