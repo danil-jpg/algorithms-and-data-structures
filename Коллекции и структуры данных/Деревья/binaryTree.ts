@@ -11,11 +11,13 @@ function binaryTree() {
 
   class BinaryResTree {
     public root: Node | null = null;
+    public arr: Node[] = [];
 
     insertNode(int: number): void {
       const newNode = new Node(int);
 
       if (this.root === null) {
+        this.arr.push(newNode);
         this.root = newNode;
       } else {
         this.insertNodeSort(this.root, newNode);
@@ -25,12 +27,14 @@ function binaryTree() {
     private insertNodeSort(parentNode: Node, newNode: Node): void {
       if (newNode.data < parentNode.data) {
         if (parentNode.left === null) {
+          this.arr.push(newNode);
           parentNode.left = newNode;
         } else {
           this.insertNodeSort(parentNode.left, newNode);
         }
       } else {
         if (parentNode.right === null) {
+          this.arr.push(newNode);
           parentNode.right = newNode;
         } else {
           this.insertNodeSort(parentNode.right, newNode);
@@ -38,14 +42,14 @@ function binaryTree() {
       }
     }
 
-    search(parentNode: Node | null, searchInt: number): Node | null {
+    searchDepth(parentNode: Node | null, searchInt: number): Node | null {
       if (this.root === null || parentNode === null) {
         console.error("Eror");
         return null;
       } else if (searchInt < parentNode.data) {
-        this.search(parentNode.left, searchInt);
+        this.searchDepth(parentNode.left, searchInt);
       } else if (searchInt > parentNode.data) {
-        this.search(parentNode.right, searchInt);
+        this.searchDepth(parentNode.right, searchInt);
       } else {
         console.log(`Search succesfull!`);
         console.log(parentNode);
@@ -53,6 +57,15 @@ function binaryTree() {
       }
 
       return null;
+    }
+
+    searchBreath(searchInt: number) {
+      for (let i = 0; i < this.arr.length; i++) {
+        if (this.arr[i].data === searchInt) {
+          console.log(this.arr[i]);
+          return this.arr[i];
+        }
+      }
     }
 
     print(): void {
@@ -78,7 +91,9 @@ function binaryTree() {
 
   binarySearch.insertNode(0.7);
 
-  binarySearch.search(binarySearch.root, 2);
+  // binarySearch.searchDepth(binarySearch.root, 2);
+
+  binarySearch.searchBreath(3);
 
   // binarySearch.print();
 }
