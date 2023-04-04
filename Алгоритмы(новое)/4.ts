@@ -19,4 +19,4 @@ function brackets(str: string): boolean {
   return true;
 }
 
-console.log(brackets("x * ((y - 10))()"));
+console.log(brackets("x * ((y - 10))((fdgdfg))"));

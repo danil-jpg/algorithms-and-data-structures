@@ -1,50 +1,66 @@
-class Graph {
-  public vertices: object;
+class NewGraph {
+  public vertices: string[];
+  public adjacencyList: object;
 
   constructor() {
-    this.vertices = {};
+    this.vertices = [];
+    this.adjacencyList = {};
   }
 
-  addVertex(value: number): void {
-    if (!this.vertices[value]) {
-      this.vertices[value] = [];
-    }
+  addVertex(vertex: string): void {
+    this.vertices.push(vertex);
+    this.adjacencyList[vertex] = {};
   }
 
-  addEdge(vertex1: number, vertex2: number): void {
-    if (!(vertex1 in this.vertices) || !(vertex2 in this.vertices)) {
-      throw new Error("В графе нет таких вершин");
-    }
-
-    if (!this.vertices[vertex1].includes(vertex2)) {
-      this.vertices[vertex1].push(vertex2);
-    }
-    if (!this.vertices[vertex2].includes(vertex1)) {
-      this.vertices[vertex2].push(vertex1);
-    }
+  addEdge(vertex1: string, vertex2: string, weight: number): void {
+    this.adjacencyList[vertex1][vertex2] = weight;
   }
 
-  print() {
-    console.log(this.vertices);
+  changeWeight(vertex1: string, vertex2: string, weight: number): void {
+    this.adjacencyList[vertex1][vertex2] = weight;
+  }
+
+  dijkstra(source) {
+    let distances = {},
+      parents = {},
+      visited = new Set();
+
+    for (let i = 0; i < this.vertices.length; i++) {
+      if (this.vertices[i] === source) {
+        distances[source] = 0;
+      } else {
+        distances[this.vertices[i]] = Infinity;
+      }
+      parents[this.vertices[i]] = null;
+    }
+
+    let currVertex = this.vertexWithMinDistance(distances, visited);
+
+    while (currVertex !== null) {
+      let distance = distances[currVertex],
+        neighbors = this.adjacencyList[currVertex];
+      for (let neighbor in neighbors) {
+        let newDistance = distance + neighbors[neighbor];
+        if (distances[neighbor] > newDistance) {
+          distances[neighbor] = newDistance;
+          parents[neighbor] = currVertex;
+        }
+      }
+      visited.add(currVertex);
+      currVertex = this.vertexWithMinDistance(distances, visited);
+    }
+
+    console.log(parents);
+    console.log(distances);
   }
 }
 
-const graph = new Graph();
+const newGraph = new NewGraph();
 
-graph.addVertex(1);
+newGraph.addVertex("Харьков");
+newGraph.addVertex("Киев");
+newGraph.addVertex("Днепр");
 
-graph.addVertex(2);
+newGraph.addEdge("Харьков", "Киев", 512);
 
-graph.addVertex(3);
-
-graph.addEdge(1, 2);
-
-graph.addEdge(1, 3);
-
-graph.print();
-
-const graphMatrix = [
-  [0, 1, 1, 0],
-  [1, 0, 0, 0],
-  [1, 0, 0, 0],
-];
+console.log(newGraph.adjacencyList);

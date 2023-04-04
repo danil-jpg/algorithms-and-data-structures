@@ -70,7 +70,7 @@ function searchNum(nums: number[], target: number) {
   return "there is no such  number";
 }
 
-searchNum(sortedArr, 66);
+console.log(searchNum(sortedArr, 66));
 
 // Шаг 1 : заполнить масиив случайными числами (fillArr())
 // Шаг 2 : разсортировать массив (countSort())
